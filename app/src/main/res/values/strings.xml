@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Midgårdens matsedel</string>
+    <string name="large_text">
+        "\n\n"
+    </string>
+    <string name="action_settings">Settings</string>
+    <string name="dagens">Dagens:</string>
+    <string name="ingenDagens">Vi har ingen dagens idag, men A La Carte finns alltid!</string>
+</resources>
