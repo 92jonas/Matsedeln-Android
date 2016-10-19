@@ -10,9 +10,7 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.ListView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.model.LatLng;
@@ -42,6 +40,7 @@ public class MainActivity extends FragmentActivity {
     private ArrayList<Integer> rowsForDays;
     private Context context;
     private SwipeRefreshLayout swipeRefreshLayout;
+    private SwipeRefreshLayout.OnRefreshListener swipeRefreshListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,12 +49,21 @@ public class MainActivity extends FragmentActivity {
         this.context = this;
         initViews();
 
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        loadWeekList();
+    }
+
+    public void initViews() {
+
         this.weekListView = (ListView) findViewById(R.id.week_list_view);
 
-        initDayChecker();
-
-        swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh);
-        final SwipeRefreshLayout.OnRefreshListener swipeRefreshListener = new SwipeRefreshLayout.OnRefreshListener() {
+        this.swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh);
+        this.swipeRefreshListener = new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
                 Log.i(TAG, "onRefresh - SwipeRefreshLayout");
@@ -65,6 +73,9 @@ public class MainActivity extends FragmentActivity {
         };
         swipeRefreshLayout.setOnRefreshListener(swipeRefreshListener);
 
+    }
+
+    private void loadWeekList(){
         swipeRefreshLayout.post(new Runnable() {
             @Override
             public void run() {
@@ -72,52 +83,8 @@ public class MainActivity extends FragmentActivity {
                 swipeRefreshListener.onRefresh();
             }
         });
-
     }
 
-    private void initDayChecker() {
-        Calendar calendar = Calendar.getInstance();
-        int day = calendar.get(Calendar.DAY_OF_WEEK);
-
-        int startRow = -1;
-        rowsForDays = new ArrayList<>();
-
-
-        switch (day) {
-
-            case Calendar.MONDAY:
-                startRow = 1;
-                break;
-            case Calendar.TUESDAY:
-                startRow = 5;
-                break;
-
-            case Calendar.WEDNESDAY:
-                startRow = 9;
-                break;
-
-            case Calendar.THURSDAY:
-                startRow = 13;
-                break;
-            case Calendar.FRIDAY:
-                startRow = 17;
-                break;
-
-            case Calendar.SATURDAY:
-
-                break;
-
-            case Calendar.SUNDAY:
-
-                break;
-
-        }
-        if (startRow > -1 && startRow < 21) {
-            for (int i = startRow; i < startRow + 4; i++) {
-                rowsForDays.add(i);
-            }
-        }
-    }
 
     public void showMap(Uri geoLocation) {
         Intent intent = new Intent(Intent.ACTION_VIEW);
@@ -148,18 +115,9 @@ public class MainActivity extends FragmentActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void initViews() {
-        initTabHost();
 
 
-    }
-
-    private void initTabHost() {
-
-
-    }
-
-    private class AsyncWebLoader extends AsyncTask<Void, Void, ArrayList<String>> {
+    public class AsyncWebLoader extends AsyncTask<Void, Void, ArrayList<String>> {
 
         @Override
         protected void onPreExecute() {
