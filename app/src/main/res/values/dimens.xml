@@ -3,4 +3,15 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="fab_right_margin">5dp</dimen>
     <dimen name="text_margin">16dp</dimen>
+    <dimen name="spinner_margin_top">30dp</dimen>
+
+    <dimen name="main_logo_padding_start_end">20dp</dimen>
+    <dimen name="main_logo_padding_top_bottom">10dp</dimen>
+    <dimen name="main_logo_divider_height">1dp</dimen>
+    <dimen name="main_logo_divider_width">100dp</dimen>
+    <dimen name="main_logo_divider_margin_start_end">10dp</dimen>
+    <dimen name="main_logo_divider_margin_top">0dp</dimen>
+    <dimen name="main_logo_divider_margin_bottom">15dp</dimen>
+    <dimen name="main_tab_height">40dp</dimen>
+
 </resources>
