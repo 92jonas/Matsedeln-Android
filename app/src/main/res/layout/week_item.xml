@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/week_item_day"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="day"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/currentDayText"/>
+
+    <TextView
+        android:id="@+id/week_item_food_alt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="foodAlt1"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/week_item_divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="divider"
+        android:textAlignment="center"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/week_item_food_alt2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="foodAlt1"
+        android:textAlignment="center"
+        android:textSize="14sp"/>
+</LinearLayout>
