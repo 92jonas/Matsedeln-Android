@@ -18,11 +18,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapView;
-import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
-import com.google.android.gms.maps.model.MarkerOptions;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 
@@ -34,10 +31,10 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import butterknife.BindView;
 import jonas.jacobsson.midgardensvardshus.matsedeln.R;
 import jonas.jacobsson.midgardensvardshus.matsedeln.adapters.WeekItemAdapter;
 import jonas.jacobsson.midgardensvardshus.matsedeln.models.WeekItem;
+import jonas.jacobsson.midgardensvardshus.matsedeln.utils.MapHandler;
 
 
 public class MainActivity extends FragmentActivity {
@@ -53,7 +50,7 @@ public class MainActivity extends FragmentActivity {
     private SwipeRefreshLayout swipeRefreshLayout;
     private SwipeRefreshLayout.OnRefreshListener swipeRefreshListener;
     private GoogleMap map;
-    private MapView mapView;
+    private MapFragment mapFragment;
     private LinearLayout mapLl, contactLl;
     private RelativeLayout menuRl;
 
@@ -80,18 +77,8 @@ public class MainActivity extends FragmentActivity {
         this.contactLl = (LinearLayout) findViewById(R.id.main_contact_ll);
         this.menuRl = (RelativeLayout) findViewById(R.id.main_menu_rl);
 
-        mapView = (MapView) findViewById(R.id.map_view);
-        mapView.getMapAsync(new OnMapReadyCallback() {
-            @Override
-            public void onMapReady(GoogleMap googleMap) {
-                map = googleMap;
-
-                final LatLng TutorialsPoint = new LatLng(21 , 57);
-                Marker TP = googleMap.addMarker(new MarkerOptions().position(TutorialsPoint));
-//                map.setMyLocationEnabled(true);
-//                map.addMarker(new MarkerOptions());
-            }
-        });
+        mapFragment = (MapFragment) getFragmentManager().findFragmentById(R.id.map_fragment);
+        MapHandler mapHandler = new MapHandler(mapFragment, this);
 
         this.swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh);
         this.swipeRefreshListener = new SwipeRefreshLayout.OnRefreshListener() {

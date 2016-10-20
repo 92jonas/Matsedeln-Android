@@ -45,7 +45,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_marginStart="5dp"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <TextView
                 android:id="@+id/week_num_tv"
@@ -97,14 +97,15 @@
             android:layout_marginRight="5dp"
             android:layout_marginStart="5dp"
             android:orientation="vertical"
-            android:visibility="gone">
+            android:visibility="visible">
 
 
-            <com.google.android.gms.maps.MapView
+            <fragment
+                android:id="@+id/map_fragment"
+                android:name="com.google.android.gms.maps.MapFragment"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:id="@+id/map_view"
-                android:layout_weight="4" />
+                android:layout_weight="5"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
