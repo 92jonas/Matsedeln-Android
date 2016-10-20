@@ -117,12 +117,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/map_find_us"
+                    android:text="@string/find_us"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:layout_weight="1"
                     />
                 <LinearLayout
+                    android:id="@+id/map_click_for_directions"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:orientation="vertical"

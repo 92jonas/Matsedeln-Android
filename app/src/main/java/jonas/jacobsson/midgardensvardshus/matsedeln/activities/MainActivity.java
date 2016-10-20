@@ -1,12 +1,16 @@
 package jonas.jacobsson.midgardensvardshus.matsedeln.activities;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.view.Menu;
@@ -16,6 +20,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
@@ -37,7 +42,7 @@ import jonas.jacobsson.midgardensvardshus.matsedeln.models.WeekItem;
 import jonas.jacobsson.midgardensvardshus.matsedeln.utils.MapHandler;
 
 
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends FragmentActivity implements ActivityCompat.OnRequestPermissionsResultCallback {
     private static final String TAG = MainActivity.class.getSimpleName();
 
     public static final String URL = "http://midgarden.se/dagens-lunch/";
@@ -46,19 +51,19 @@ public class MainActivity extends FragmentActivity {
 
     private ListView weekListView;
     private ArrayList<Integer> rowsForDays;
-    private Context context;
     private SwipeRefreshLayout swipeRefreshLayout;
     private SwipeRefreshLayout.OnRefreshListener swipeRefreshListener;
     private GoogleMap map;
     private MapFragment mapFragment;
+    private MapHandler mapHandler;
     private LinearLayout mapLl, contactLl;
     private RelativeLayout menuRl;
+    private static final int PERMISSION_MY_LOCATION = 12;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        this.context = this;
         initViews();
 
 
@@ -74,11 +79,12 @@ public class MainActivity extends FragmentActivity {
 
         this.weekListView = (ListView) findViewById(R.id.week_list_view);
         this.mapLl = (LinearLayout) findViewById(R.id.main_map_ll);
+
         this.contactLl = (LinearLayout) findViewById(R.id.main_contact_ll);
         this.menuRl = (RelativeLayout) findViewById(R.id.main_menu_rl);
 
         mapFragment = (MapFragment) getFragmentManager().findFragmentById(R.id.map_fragment);
-        MapHandler mapHandler = new MapHandler(mapFragment, this);
+        mapHandler = new MapHandler(mapFragment, this);
 
         this.swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh);
         this.swipeRefreshListener = new SwipeRefreshLayout.OnRefreshListener() {
@@ -93,6 +99,12 @@ public class MainActivity extends FragmentActivity {
 
         initBottomBar();
 
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mapHandler.stopRequestingLocation(this);
     }
 
     private void initBottomBar() {
@@ -110,6 +122,18 @@ public class MainActivity extends FragmentActivity {
                         contactLl.setVisibility(View.GONE);
                         break;
                     case R.id.tab_map:
+                        mapHandler.initMyLocation(MainActivity.this);
+                        if (ContextCompat.checkSelfPermission(MainActivity.this,
+                                Manifest.permission.ACCESS_FINE_LOCATION)
+                                != PackageManager.PERMISSION_GRANTED) {
+
+                            ActivityCompat.requestPermissions(MainActivity.this,
+                                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                                    PERMISSION_MY_LOCATION);
+
+                        } else {
+                            mapHandler.initMyLocation(MainActivity.this);
+                        }
                         menuRl.setVisibility(View.GONE);
                         mapLl.setVisibility(View.VISIBLE);
                         contactLl.setVisibility(View.GONE);
@@ -205,13 +229,14 @@ public class MainActivity extends FragmentActivity {
 
         @Override
         protected void onPostExecute(ArrayList<String> menuItems) {
-            ArrayList<WeekItem> items = new ArrayList<>();
-            TextView weekNumTv = (TextView) findViewById(R.id.week_num_tv);
-            weekNumTv.setText(menuItems.get(0));
-            Log.i(TAG, "items size= " + menuItems.size());
+            if (!menuItems.isEmpty()) {
+                ArrayList<WeekItem> items = new ArrayList<>();
+                TextView weekNumTv = (TextView) findViewById(R.id.week_num_tv);
+                weekNumTv.setText(menuItems.get(0));
+                Log.i(TAG, "items size= " + menuItems.size());
 
-            for (int i = 1; i < menuItems.size(); i += 4) {
-                Log.i(TAG, "items id= " + i);
+                for (int i = 1; i < menuItems.size(); i += 4) {
+                    Log.i(TAG, "items id= " + i);
 //                String item = menuItems.get(i);
 //                View child = getLayoutInflater().inflate(R.layout.week_item, null);
 //                TextView tv = (TextView) child.findViewById(R.id.week_item_tv);
@@ -247,27 +272,45 @@ public class MainActivity extends FragmentActivity {
 //
 //                tv.setText(item);
 
-                Log.i(TAG, "veckodag: " + menuItems.get(i));
-                if (menuItems.size() > i + 3) {
-                    items.add(new WeekItem(menuItems.get(i), menuItems.get(i + 1), menuItems.get(i + 2), menuItems.get(i + 3)));
-                } else if (menuItems.size() > i + 2) {
-                    items.add(new WeekItem(menuItems.get(i), menuItems.get(i + 1), menuItems.get(i + 2), ""));
-                } else if (menuItems.size() > i + 1) {
-                    items.add(new WeekItem(menuItems.get(i), menuItems.get(i + 1), "", ""));
-                } else {
-                    items.add(new WeekItem(menuItems.get(i), "", "", ""));
+                    Log.i(TAG, "veckodag: " + menuItems.get(i));
+                    if (menuItems.size() > i + 3) {
+                        items.add(new WeekItem(menuItems.get(i), menuItems.get(i + 1), menuItems.get(i + 2), menuItems.get(i + 3)));
+                    } else if (menuItems.size() > i + 2) {
+                        items.add(new WeekItem(menuItems.get(i), menuItems.get(i + 1), menuItems.get(i + 2), ""));
+                    } else if (menuItems.size() > i + 1) {
+                        items.add(new WeekItem(menuItems.get(i), menuItems.get(i + 1), "", ""));
+                    } else {
+                        items.add(new WeekItem(menuItems.get(i), "", "", ""));
+                    }
+
                 }
 
+
+                WeekItemAdapter adapter = new WeekItemAdapter(MainActivity.this, R.layout.week_item, items);
+                weekListView.setAdapter(adapter);
+
+
+            } else {
+                Toast.makeText(MainActivity.this, "Misslyckades, försök igen!", Toast.LENGTH_LONG);
             }
-
-
-            WeekItemAdapter adapter = new WeekItemAdapter(context, R.layout.week_item, items);
-            weekListView.setAdapter(adapter);
-
-
             swipeRefreshLayout.setRefreshing(false);
         }
 
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case PERMISSION_MY_LOCATION: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    mapHandler.initMyLocation(this);
+
+                }
+            }
+        }
     }
 
 

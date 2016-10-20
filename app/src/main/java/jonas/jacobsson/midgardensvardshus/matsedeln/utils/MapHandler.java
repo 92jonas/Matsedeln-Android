@@ -7,8 +7,8 @@ import android.location.Location;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.widget.ImageView;
 
@@ -23,6 +23,8 @@ import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import jonas.jacobsson.midgardensvardshus.matsedeln.R;
@@ -31,7 +33,7 @@ import jonas.jacobsson.midgardensvardshus.matsedeln.R;
  * Created by jonas on 2016-09-29.
  */
 
-public class MapHandler implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, com.google.android.gms.location.LocationListener {
+public class MapHandler implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, com.google.android.gms.location.LocationListener, GoogleMap.OnMarkerClickListener {
 
     private static final String TAG = MapHandler.class.getSimpleName();
 
@@ -49,6 +51,8 @@ public class MapHandler implements GoogleApiClient.ConnectionCallbacks, GoogleAp
     private Handler handler;
     private float slowZoomOutValue;
     private boolean stopSlowZoomOut;
+    private LatLng midgarden;
+    private Marker midgardenMarker;
 
     public MapHandler(final MapFragment mapFragment, Context context) {
         this.context = context;
@@ -59,30 +63,43 @@ public class MapHandler implements GoogleApiClient.ConnectionCallbacks, GoogleAp
 
     private void initLocation() {
 
-        LatLng midgardenLatLng = new LatLng(56.252907, 12.892882);
-        map.addMarker(new MarkerOptions().position(midgardenLatLng).title(context.getResources().getString(R.string.map_find_us)));
-        moveToLocation(midgardenLatLng, 16f, true);
+        midgarden = new LatLng(56.252907, 12.892882);
+        midgardenMarker = map.addMarker(new MarkerOptions().position(midgarden).title(context.getResources().getString(R.string.map_find_us)));
+        moveToLocation(midgarden, 16f, true);
 
-//        map.setMyLocationEnabled(true);
-        // Handles location updating using GPS, network and passive automatically
-        locationClient = new GoogleApiClient.Builder(context)
-                .addConnectionCallbacks(this)
-                .addOnConnectionFailedListener(this)
-                .addApi(LocationServices.API)
-                .build();
+        map.setOnMarkerClickListener(MapHandler.this);
 
-        // Frequency of sending location requests
-        locationRequestAlarm = LocationRequest.create()
-                .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
-                .setInterval(10000)        // 10 seconds, in milliseconds
-                .setFastestInterval(1000); // 1 second, in milliseconds
+    }
 
-        locationRequestStandby = LocationRequest.create()
-                .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
-                .setInterval(20000)        // 20 seconds, in milliseconds
-                .setFastestInterval(5000); // 5 second, in milliseconds
+    public void initMyLocation(Context context) {
+        this.context = context;
+        if (ContextCompat.checkSelfPermission(context,
+                Manifest.permission.ACCESS_FINE_LOCATION)
+                == PackageManager.PERMISSION_GRANTED) {
 
-        locationRequest = locationRequestStandby;
+            map.setMyLocationEnabled(true);
+            // Handles location updating using GPS, network and passive automatically
+            locationClient = new GoogleApiClient.Builder(context)
+                    .addConnectionCallbacks(this)
+                    .addOnConnectionFailedListener(this)
+                    .addApi(LocationServices.API)
+                    .build();
+
+            // Frequency of sending location requests
+            locationRequestAlarm = LocationRequest.create()
+                    .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
+                    .setInterval(10000)        // 10 seconds, in milliseconds
+                    .setFastestInterval(1000); // 1 second, in milliseconds
+
+            locationRequestStandby = LocationRequest.create()
+                    .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
+                    .setInterval(20000)        // 20 seconds, in milliseconds
+                    .setFastestInterval(5000); // 5 second, in milliseconds
+
+            locationRequest = locationRequestStandby;
+            startRequestingLocation(context);
+
+        }
     }
 
     private void initMap() {
@@ -96,12 +113,16 @@ public class MapHandler implements GoogleApiClient.ConnectionCallbacks, GoogleAp
         });
     }
 
-    public void startRequestingLocation() {
-        locationClient.connect();
+    public void startRequestingLocation(Context context) {
+        if (locationClient != null) {
+            this.context = context;
+            locationClient.connect();
+        }
     }
 
-    public void stopRequestingLocation() {
-        if (locationClient.isConnected()) {
+    public void stopRequestingLocation(Context context) {
+        if (locationClient != null && locationClient.isConnected()) {
+            this.context = context;
             LocationServices.FusedLocationApi.removeLocationUpdates(locationClient, this);
             locationClient.disconnect();
         }
@@ -133,16 +154,35 @@ public class MapHandler implements GoogleApiClient.ConnectionCallbacks, GoogleAp
     public void onConnected(Bundle bundle) {
         Log.i(TAG, "GPS - Location services connected.");
 
-        Location location = LocationServices.FusedLocationApi.getLastLocation(locationClient);
-        handleNewLocation(location);
-        LocationServices.FusedLocationApi.requestLocationUpdates(locationClient, locationRequest, this);
+        if (ContextCompat.checkSelfPermission(context,
+                Manifest.permission.ACCESS_FINE_LOCATION)
+                == PackageManager.PERMISSION_GRANTED) {
+            Location location = LocationServices.FusedLocationApi.getLastLocation(locationClient);
+            handleNewLocation(location);
+            LocationServices.FusedLocationApi.requestLocationUpdates(locationClient, locationRequest, this);
+        }
     }
 
     private void handleNewLocation(Location location) {
         if (location != null) {
             Log.i(TAG, "GPS - onLocationChanged, location= " + location.toString());
+            if (oldLocation == null) {
+                Log.i(TAG, "GPS - onLocationChanged, show me and midis");
+                LatLngBounds.Builder builder = new LatLngBounds.Builder();
+                builder.include(midgarden);
+                builder.include(new LatLng(location.getLatitude(), location.getLongitude()));
+                LatLngBounds bounds = builder.build();
+                Double padding = getDisplayWidth(context) * 0.25; // distance to edges of the map from the outermost marker in pixels
+                CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds, padding.intValue());
+                map.animateCamera(cu);
+                midgardenMarker.showInfoWindow();
+            }
             oldLocation = location;
         }
+    }
+
+    public void putFocusOnMidis() {
+
     }
 
     @Override
@@ -159,4 +199,14 @@ public class MapHandler implements GoogleApiClient.ConnectionCallbacks, GoogleAp
         handleNewLocation(location);
     }
 
+    public static int getDisplayWidth(Context context) {
+        DisplayMetrics metrics = context.getResources().getDisplayMetrics();
+        int width = metrics.widthPixels;
+        return width;
+    }
+
+    @Override
+    public boolean onMarkerClick(Marker marker) {
+        return true;
+    }
 }

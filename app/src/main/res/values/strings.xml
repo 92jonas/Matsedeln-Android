@@ -6,7 +6,8 @@
     <string name="action_settings">Settings</string>
     <string name="dagens">Dagens:</string>
     <string name="ingenDagens">Vi har ingen dagens idag, men A La Carte finns alltid!</string>
-    <string name="map_find_us">Här hittar du oss:</string>
+    <string name="map_find_us">Här hittar du oss</string>
+    <string name="find_us">Här hittar du oss:</string>
     <string name="name">Midgårdens Värdshus</string>
     <string name="address">Midgårdsgatan 1,\n262 71 Ängelholm</string>
 </resources>
