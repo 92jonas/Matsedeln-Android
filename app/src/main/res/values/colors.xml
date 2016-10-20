@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimary">#7e4839</color>
     <color name="colorPrimaryDark">#583227</color>
-    <color name="colorAccent">#7e4839</color>
+    <color name="colorAccent">#FFFFFF</color>
 
     <color name="currentDayText">#000000</color>
     <color name="currentDayText1">#3269df</color>
@@ -10,4 +10,6 @@
     <color name="currentDayText3">#b70003</color>
     <color name="otherDayText1">#6b6b6b</color>
     <color name="otherDayText">#939393</color>
+
+    <color name="mapTextColor2">#4e4e4e</color>
 </resources>

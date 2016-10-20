@@ -5,15 +5,26 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.annotation.IdRes;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapView;
+import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
+import com.roughike.bottombar.BottomBar;
+import com.roughike.bottombar.OnTabSelectListener;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -22,8 +33,8 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Calendar;
 
+import butterknife.BindView;
 import jonas.jacobsson.midgardensvardshus.matsedeln.R;
 import jonas.jacobsson.midgardensvardshus.matsedeln.adapters.WeekItemAdapter;
 import jonas.jacobsson.midgardensvardshus.matsedeln.models.WeekItem;
@@ -41,6 +52,10 @@ public class MainActivity extends FragmentActivity {
     private Context context;
     private SwipeRefreshLayout swipeRefreshLayout;
     private SwipeRefreshLayout.OnRefreshListener swipeRefreshListener;
+    private GoogleMap map;
+    private MapView mapView;
+    private LinearLayout mapLl, contactLl;
+    private RelativeLayout menuRl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,9 +73,25 @@ public class MainActivity extends FragmentActivity {
         loadWeekList();
     }
 
-    public void initViews() {
+    private void initViews() {
 
         this.weekListView = (ListView) findViewById(R.id.week_list_view);
+        this.mapLl = (LinearLayout) findViewById(R.id.main_map_ll);
+        this.contactLl = (LinearLayout) findViewById(R.id.main_contact_ll);
+        this.menuRl = (RelativeLayout) findViewById(R.id.main_menu_rl);
+
+        mapView = (MapView) findViewById(R.id.map_view);
+        mapView.getMapAsync(new OnMapReadyCallback() {
+            @Override
+            public void onMapReady(GoogleMap googleMap) {
+                map = googleMap;
+
+                final LatLng TutorialsPoint = new LatLng(21 , 57);
+                Marker TP = googleMap.addMarker(new MarkerOptions().position(TutorialsPoint));
+//                map.setMyLocationEnabled(true);
+//                map.addMarker(new MarkerOptions());
+            }
+        });
 
         this.swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh);
         this.swipeRefreshListener = new SwipeRefreshLayout.OnRefreshListener() {
@@ -73,9 +104,39 @@ public class MainActivity extends FragmentActivity {
         };
         swipeRefreshLayout.setOnRefreshListener(swipeRefreshListener);
 
+        initBottomBar();
+
     }
 
-    private void loadWeekList(){
+    private void initBottomBar() {
+        menuRl.setVisibility(View.VISIBLE);
+        mapLl.setVisibility(View.GONE);
+        contactLl.setVisibility(View.GONE);
+        BottomBar bottomBar = (BottomBar) findViewById(R.id.main_bottom_bar);
+        bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
+            @Override
+            public void onTabSelected(@IdRes int tabId) {
+                switch (tabId) {
+                    case R.id.tab_menu:
+                        menuRl.setVisibility(View.VISIBLE);
+                        mapLl.setVisibility(View.GONE);
+                        contactLl.setVisibility(View.GONE);
+                        break;
+                    case R.id.tab_map:
+                        menuRl.setVisibility(View.GONE);
+                        mapLl.setVisibility(View.VISIBLE);
+                        contactLl.setVisibility(View.GONE);
+                        break;
+                    case R.id.tab_mail:
+                        menuRl.setVisibility(View.GONE);
+                        mapLl.setVisibility(View.GONE);
+                        contactLl.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+    }
+
+    private void loadWeekList() {
         swipeRefreshLayout.post(new Runnable() {
             @Override
             public void run() {
@@ -114,7 +175,6 @@ public class MainActivity extends FragmentActivity {
         //}
         return super.onOptionsItemSelected(item);
     }
-
 
 
     public class AsyncWebLoader extends AsyncTask<Void, Void, ArrayList<String>> {

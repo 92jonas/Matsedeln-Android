@@ -17,6 +17,16 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="MapNameFont">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/currentDayText</item>
+    </style>
+
+    <style name="MapAdressFont">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/mapTextColor2</item>
+    </style>
     <style name="FontWeekNum" parent="@android:style/TextAppearance.Medium">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
