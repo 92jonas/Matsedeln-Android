@@ -2,11 +2,11 @@
     <tab
         icon="@drawable/ic_local_dining_black_24dp"
         id="@+id/tab_menu"
-        title="Meny" />
+        title="Meny"/>
     <tab
         icon="@drawable/ic_map_black_24dp"
         id="@+id/tab_map"
-        title="Hitta hit" />
+        title="Information"/>
     <tab
         icon="@drawable/ic_email_black_24dp"
         id="@+id/tab_mail"

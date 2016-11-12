@@ -159,7 +159,9 @@ public class MapHandler implements GoogleApiClient.ConnectionCallbacks, GoogleAp
                 == PackageManager.PERMISSION_GRANTED) {
             Location location = LocationServices.FusedLocationApi.getLastLocation(locationClient);
             handleNewLocation(location);
-            LocationServices.FusedLocationApi.requestLocationUpdates(locationClient, locationRequest, this);
+            if (locationClient.isConnected()) {
+                LocationServices.FusedLocationApi.requestLocationUpdates(locationClient, locationRequest, this);
+            }
         }
     }
 

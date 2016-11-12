@@ -3,471 +3,354 @@
 
     <item
         is-multidex="true"
-        jar="/home/jonas/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/24.1.0/support-annotations-24.1.0.jar"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.0.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="23.0.3"
-        sha1="8a23146e1a8c7cb4758e3d3f62449213f1e51f67">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.1.0_944048969a534ad51dd734033e1c2258337fcbcc/classes.dex" />
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.0.0_c11e9dc358daadf135e03798fee0637a75a055d0/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/net.steamcrafted/materialiconlib/1.1.1/jars/classes.jar"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.2"
+        revision="25.0.0"
+        sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.0.0_bc5ed701e01c0de6217ecb1588c091d2b1c6fcc0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4ccbcda5c72027c7f7c14be9ff8640d9cb0d8da0">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.0.0_d12c4d80f8653766b7b9c18a7178318931f2f5ac/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="122ec9237acd8a57d974b9d529987f1ee6ca5aea">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-maps-9.8.0_70d0ce57dc2d55a52a5d8bcc79541b2bd21ec57c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/exploded-aar/net.steamcrafted/materialiconlib/1.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
         sha1="ff0e1018e7f7d0e7178a7c3eff816574ee7f6718">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/net.steamcrafted-materialiconlib-1.1.1_c50453bf0a7944224278cc56516ad7b145e4aab9/classes.dex" />
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/net.steamcrafted-materialiconlib-1.1.1_30d36d0efc2b8174d8ab0b5506b1823bad893018/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.3.0/jars/classes.jar"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.0/jars/libs/internal_impl-25.0.0.jar"
         jumboMode="true"
         optimize="true"
-        revision="23.0.3"
-        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.3.0_a762e61782bcd9d97c699921b8c60332e8e83251/classes.dex" />
+        revision="25.0.0"
+        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_1b1a5eb4640030ec9fc3902338e663890217ce9d/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.6.1/jars/classes.jar"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.0/jars/libs/internal_impl-25.0.0.jar"
         jumboMode="true"
         optimize="true"
-        revision="23.0.2"
-        sha1="62ff84124b89177abc0c27f3e38c9732f2d41617">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-maps-9.6.1_3db7eb1e9a069d0c8882551385ac3c086656c763/classes.dex" />
+        revision="25.0.0"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_2f45f70cfd982a74017f7cf20598789e2f2c9a4e/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/jonas/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.4.0/ea392375cf9ff59234a82e7928a204215ccc98cd/butterknife-annotations-8.4.0.jar"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/exploded-aar/com.android.support/design/25.0.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="23.0.3"
-        sha1="ea392375cf9ff59234a82e7928a204215ccc98cd">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/butterknife-annotations-8.4.0_758018ddaf0eeca896928f58fbfb634368d6068f/classes.dex" />
+        revision="25.0.0"
+        sha1="26384be22ddc74cfe197ebda9edbc7d1fd8bd537">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-25.0.0_4b39ae75c6c3c571b6718eeb04e3e286f9c12a45/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/jars/classes.jar"
+        jar="/Users/Jonas/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.0.0/support-annotations-25.0.0.jar"
         jumboMode="true"
         optimize="true"
-        revision="23.0.2"
-        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.3.0_b6d00c1aa063e6fe4958b46acac149667b1c7a91/classes.dex" />
+        revision="25.0.0"
+        sha1="a22d2cc94da87b254451fa8ed28afc30b4653773">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.0.0_04719f69ac6dced35f4de4a85e4a37167257c5a9/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.6.1/jars/classes.jar"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/exploded-aar/com.android.support.constraint/constraint-layout/1.0.0-beta3/jars/classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="23.0.2"
-        sha1="4a36600281a648769411ef642c331851732bf29e">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tasks-9.6.1_06c723c5b80db95a41ec376ec6b8d62c055f1062/classes.dex" />
+        revision="25.0.0"
+        sha1="b81d40d208a3308c8e81b2cccd3054238a13d140">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support.constraint-constraint-layout-1.0.0-beta3_66edf76e1ed0c03ccd6e0411fa023db1b4629eaa/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/jars/classes.jar"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/exploded-aar/com.roughike/bottom-bar/2.0.2/jars/classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="23.0.3"
-        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.3.0_6ac1fe941a98139add8fbcf1b590a3d72a9fdfdc/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="b8754caecbe0580b993fd7ef949cf220cde8606b">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_346510725f79e9ff56050d68e71dd6030388d798/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/.gradle/caches/modules-2/files-2.1/org.jsoup/jsoup/1.9.2/5e3bda828a80c7a21dfbe2308d1755759c2fd7b4/jsoup-1.9.2.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="5e3bda828a80c7a21dfbe2308d1755759c2fd7b4">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/jsoup-1.9.2_ccd3b69fef0272b30c2dee14869c01bd99681034/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.4.0/ea392375cf9ff59234a82e7928a204215ccc98cd/butterknife-annotations-8.4.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="ea392375cf9ff59234a82e7928a204215ccc98cd">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/butterknife-annotations-8.4.0_758018ddaf0eeca896928f58fbfb634368d6068f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/24.1.0/support-annotations-24.1.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="8a23146e1a8c7cb4758e3d3f62449213f1e51f67">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.1.0_944048969a534ad51dd734033e1c2258337fcbcc/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/.gradle/caches/modules-2/files-2.1/org.jsoup/jsoup/1.9.2/5e3bda828a80c7a21dfbe2308d1755759c2fd7b4/jsoup-1.9.2.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="5e3bda828a80c7a21dfbe2308d1755759c2fd7b4">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/jsoup-1.9.2_ccd3b69fef0272b30c2dee14869c01bd99681034/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="eccaaa9ffa6bb4bfbd2e870f01aaf69655d353be">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-9.6.1_e78a6206ceac48248c6ede858930b17676218e88/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="af7582c6b327449c6d32518e6a10307860b7b5d6">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-9.6.1_b7eb04ec3d85abf27b881d8d0975651253fff947/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/net.steamcrafted/materialiconlib/1.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="ff0e1018e7f7d0e7178a7c3eff816574ee7f6718">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/net.steamcrafted-materialiconlib-1.1.1_c50453bf0a7944224278cc56516ad7b145e4aab9/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="9fdb7be85a80487cb5441c6f22b33597dca54dee">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_7b08ce2fd1b2c0d7aabe9497e137f4acac99995d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.4.0/ea392375cf9ff59234a82e7928a204215ccc98cd/butterknife-annotations-8.4.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="ea392375cf9ff59234a82e7928a204215ccc98cd">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/butterknife-annotations-8.4.0_758018ddaf0eeca896928f58fbfb634368d6068f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="62ff84124b89177abc0c27f3e38c9732f2d41617">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-maps-9.6.1_3db7eb1e9a069d0c8882551385ac3c086656c763/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="0ba22d5bb97829841494ea96af65c93826ca6572">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_346510725f79e9ff56050d68e71dd6030388d798/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="79f521967ad7f49b34748db89df02852c2b2f87b">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-location-9.6.1_872aa75b59c7c9684ddce63fffc7c0b01105e883/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.3.0_b6d00c1aa063e6fe4958b46acac149667b1c7a91/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.roughike/bottom-bar/2.0.2/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
+        revision="25.0.0"
         sha1="32534a05122d0c535cc8b885e45b1e7ce3b0f03e">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.roughike-bottom-bar-2.0.2_905cc6890274ea6cb2d0baf15d42aef18ccba517/classes.dex" />
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.roughike-bottom-bar-2.0.2_1f44d88fce0229c850879d11fc45d55b665055c9/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.4.0/jars/classes.jar"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="23.0.2"
-        sha1="a07818a1ecabdb149998823429cce555af4b9cba">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.jakewharton-butterknife-8.4.0_904b42006d2a2a1d4f19c113265de82f37cb4255/classes.dex" />
+        revision="25.0.0"
+        sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.0.0_098d7cce6ebe49d6ae993a1df3bf8e3de129f251/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.3.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="debf30ce0a7560396b6235edef77e447006454c2">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-23.3.0_faacab3feef6c13221d9560b9975f60864960ad7/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.6.1/jars/classes.jar"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="4a36600281a648769411ef642c331851732bf29e">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tasks-9.6.1_06c723c5b80db95a41ec376ec6b8d62c055f1062/classes.dex" />
+        sha1="c160a04e4df9256afe6f580f122cbcaf4482b9a3">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_76842a2959075ca3463ad74cf58f9dd095d93033/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="62ff84124b89177abc0c27f3e38c9732f2d41617">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-maps-9.6.1_3db7eb1e9a069d0c8882551385ac3c086656c763/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="79f521967ad7f49b34748db89df02852c2b2f87b">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-location-9.6.1_872aa75b59c7c9684ddce63fffc7c0b01105e883/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.4.0/jars/classes.jar"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.4.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
         sha1="a07818a1ecabdb149998823429cce555af4b9cba">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.jakewharton-butterknife-8.4.0_904b42006d2a2a1d4f19c113265de82f37cb4255/classes.dex" />
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.jakewharton-butterknife-8.4.0_1f0e4e67a2f6ae7075681170fff529e0eada022b/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/classes.jar"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="23.0.2"
-        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.0.0_07ae9188508105d152c08421b899fee210504d3e/classes.dex" />
+        revision="25.0.0"
+        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.0.0_7560e0b313f6cccd32387138f1ce6a2e5c0952a6/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/libs/internal_impl-24.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.0.0_abc5e292b52eb585e5d95f6d3cd696914d725e33/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.roughike/bottom-bar/2.0.2/jars/classes.jar"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/exploded-aar/net.steamcrafted/materialiconlib/1.1.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="32534a05122d0c535cc8b885e45b1e7ce3b0f03e">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.roughike-bottom-bar-2.0.2_905cc6890274ea6cb2d0baf15d42aef18ccba517/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="4a36600281a648769411ef642c331851732bf29e">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tasks-9.6.1_06c723c5b80db95a41ec376ec6b8d62c055f1062/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="f0001e71cea6ae432a00021c6f727f5ef0f3d27e">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-23.3.0_d15fc156c506572da05696444c0902bf66833fdd/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="eccaaa9ffa6bb4bfbd2e870f01aaf69655d353be">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-9.6.1_e78a6206ceac48248c6ede858930b17676218e88/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="af7582c6b327449c6d32518e6a10307860b7b5d6">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-9.6.1_b7eb04ec3d85abf27b881d8d0975651253fff947/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="9fdb7be85a80487cb5441c6f22b33597dca54dee">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_7b08ce2fd1b2c0d7aabe9497e137f4acac99995d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.3.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.3.0_a762e61782bcd9d97c699921b8c60332e8e83251/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.3.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="debf30ce0a7560396b6235edef77e447006454c2">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-23.3.0_faacab3feef6c13221d9560b9975f60864960ad7/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.roughike/bottom-bar/2.0.2/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="32534a05122d0c535cc8b885e45b1e7ce3b0f03e">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.roughike-bottom-bar-2.0.2_905cc6890274ea6cb2d0baf15d42aef18ccba517/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="0ba22d5bb97829841494ea96af65c93826ca6572">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_346510725f79e9ff56050d68e71dd6030388d798/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="79f521967ad7f49b34748db89df02852c2b2f87b">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-location-9.6.1_872aa75b59c7c9684ddce63fffc7c0b01105e883/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.0.0_07ae9188508105d152c08421b899fee210504d3e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/libs/internal_impl-24.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.0.0_abc5e292b52eb585e5d95f6d3cd696914d725e33/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.3.0_6ac1fe941a98139add8fbcf1b590a3d72a9fdfdc/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="a07818a1ecabdb149998823429cce555af4b9cba">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.jakewharton-butterknife-8.4.0_904b42006d2a2a1d4f19c113265de82f37cb4255/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="eccaaa9ffa6bb4bfbd2e870f01aaf69655d353be">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-9.6.1_e78a6206ceac48248c6ede858930b17676218e88/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="f0001e71cea6ae432a00021c6f727f5ef0f3d27e">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-23.3.0_d15fc156c506572da05696444c0902bf66833fdd/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="af7582c6b327449c6d32518e6a10307860b7b5d6">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-9.6.1_b7eb04ec3d85abf27b881d8d0975651253fff947/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/exploded-aar/net.steamcrafted/materialiconlib/1.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
         sha1="ff0e1018e7f7d0e7178a7c3eff816574ee7f6718">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/net.steamcrafted-materialiconlib-1.1.1_c50453bf0a7944224278cc56516ad7b145e4aab9/classes.dex" />
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/net.steamcrafted-materialiconlib-1.1.1_30d36d0efc2b8174d8ab0b5506b1823bad893018/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/jonas/git/Matsedeln-Android/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.0/jars/libs/internal_impl-25.0.0.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.2"
-        sha1="9fdb7be85a80487cb5441c6f22b33597dca54dee">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_7b08ce2fd1b2c0d7aabe9497e137f4acac99995d/classes.dex" />
+        revision="25.0.0"
+        sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_f3ecd6d0d5e47d46f747c7e8b395d31adaecf20f/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/jonas/.gradle/caches/modules-2/files-2.1/org.jsoup/jsoup/1.9.2/5e3bda828a80c7a21dfbe2308d1755759c2fd7b4/jsoup-1.9.2.jar"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.4.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.2"
+        revision="25.0.0"
+        sha1="a07818a1ecabdb149998823429cce555af4b9cba">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.jakewharton-butterknife-8.4.0_1f0e4e67a2f6ae7075681170fff529e0eada022b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="bf2e1838e4428616c1aa26edf43de72b5b99bf84">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tasks-9.8.0_c22f785e6ee55483f5b600542798727bfc9c83be/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="25e52e56f46fb7ac7f8aee13701b9d3406668539">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_76842a2959075ca3463ad74cf58f9dd095d93033/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Jonas/.gradle/caches/modules-2/files-2.1/org.jsoup/jsoup/1.9.2/5e3bda828a80c7a21dfbe2308d1755759c2fd7b4/jsoup-1.9.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
         sha1="5e3bda828a80c7a21dfbe2308d1755759c2fd7b4">
-        <dex dex="/home/jonas/git/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/jsoup-1.9.2_ccd3b69fef0272b30c2dee14869c01bd99681034/classes.dex" />
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/jsoup-1.9.2_5b04312fe350a52c56dd7052b3a90e8dbfca74d5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="26674000177e45447a0326a6ad84612761199a13">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.0.0_a842f8d8c273ef6d13b212489c3739e2f36ca30b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="6ba2527a266b7b13a410d58cc625770f0a310f27">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_f7c6c252e7d9cc544d146cc782f04d07c7ed8688/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/exploded-aar/com.roughike/bottom-bar/2.0.2/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="32534a05122d0c535cc8b885e45b1e7ce3b0f03e">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.roughike-bottom-bar-2.0.2_1f44d88fce0229c850879d11fc45d55b665055c9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.0.0_2fd1754692ceb078ce6ab188971824d2877db18d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.0.0_6dff9a5b064b9c37ed3e1cd0ef2e30e271688cf2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Jonas/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.0-beta3/constraint-layout-solver-1.0.0-beta3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="22c1e9d26251df254de7cc9dee01f5f134b10eba">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/constraint-layout-solver-1.0.0-beta3_be20a430b6553701d62c932f1f4cb5fdf0e868a6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5e497d60f0cb6ce87c458ac5420a46d0fed49bd0">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-25.0.0_14fa45456526ba326aa0976713052cb750059a4b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="04bbbddf868aa02dd33f9e90d8f5d908c360f638">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-location-9.8.0_8ee7dbcec65ded1d853b2e87aa0ee1d15c930004/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/exploded-aar/com.android.support/transition/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0c6d948e6cb9ea6f535d175fb61ba2930719c0e9">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-transition-25.0.0_2ad522f6c424c9dd8cae30194087f31f8e679c78/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_65443bc633a47a459230a4ad83278276a67ac186/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="07daa0b6e1d455c82a38422ffe287c18823d339a">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.0.0_8af7f162f4c49bb0e213401be9447639c43a8d4a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Jonas/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.4.0/ea392375cf9ff59234a82e7928a204215ccc98cd/butterknife-annotations-8.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ea392375cf9ff59234a82e7928a204215ccc98cd">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/butterknife-annotations-8.4.0_f9c8907f3464b24e71bb4348b34ffe72ab2097b9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7e92aadd0697922316d1395c1887a23aebec640a">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-9.8.0_9464bde04fabb00426cccfbed1c3f7a0a066210d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Jonas/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.4.0/ea392375cf9ff59234a82e7928a204215ccc98cd/butterknife-annotations-8.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ea392375cf9ff59234a82e7928a204215ccc98cd">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/butterknife-annotations-8.4.0_f9c8907f3464b24e71bb4348b34ffe72ab2097b9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_f1d6b4e72ee553aafa35c0a53492407119f97a70/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Jonas/.gradle/caches/modules-2/files-2.1/org.jsoup/jsoup/1.9.2/5e3bda828a80c7a21dfbe2308d1755759c2fd7b4/jsoup-1.9.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5e3bda828a80c7a21dfbe2308d1755759c2fd7b4">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/jsoup-1.9.2_5b04312fe350a52c56dd7052b3a90e8dbfca74d5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4ee6a7528a63d17caf9785473fdb8ec8a2a27275">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_f7c6c252e7d9cc544d146cc782f04d07c7ed8688/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9f6d236bac26d02b410e4ee186ba517ace5ee661">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-9.8.0_d5da99caf6ace2036489ecc4662a670ca7d6e640/classes.dex" />
     </item>
 
 </items>
