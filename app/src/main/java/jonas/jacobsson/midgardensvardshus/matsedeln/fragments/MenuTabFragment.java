@@ -11,7 +11,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import org.jsoup.Jsoup;
@@ -24,6 +23,7 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import io.paperdb.Paper;
 import jonas.jacobsson.midgardensvardshus.matsedeln.R;
 import jonas.jacobsson.midgardensvardshus.matsedeln.adapters.WeekItemAdapter;
 import jonas.jacobsson.midgardensvardshus.matsedeln.models.WeekItem;
@@ -36,6 +36,8 @@ import jonas.jacobsson.midgardensvardshus.matsedeln.utils.MenuParser;
 public class MenuTabFragment extends Fragment {
 
     private static final String TAG = MenuTabFragment.class.getSimpleName();
+
+    private static final String WEEK_MEALS = "weekMeals";
 
     @BindView(R.id.swipe_refresh)
     SwipeRefreshLayout swipeRefreshLayout;
@@ -79,6 +81,11 @@ public class MenuTabFragment extends Fragment {
     }
 
     private void loadWeekList() {
+        ArrayList<WeekItem> items = Paper.book().read(WEEK_MEALS);
+        if (items != null) {
+            WeekItemAdapter adapter = new WeekItemAdapter(getActivity(), R.layout.week_item, items);
+            weekListView.setAdapter(adapter);
+        }
         swipeRefreshLayout.post(new Runnable() {
             @Override
             public void run() {
@@ -132,7 +139,7 @@ public class MenuTabFragment extends Fragment {
                 Log.i(TAG, "items size= " + menuItems.size());
 
                 String strWeekNum = MenuParser.getWeekNumber(menuItems);
-                items.add(new WeekItem(strWeekNum,"Lunch 11.00 - 14.00"));
+                items.add(new WeekItem(strWeekNum, "Lunch 11.00 - 14.00"));
                 ArrayList<String> weekdays = new ArrayList<>();
                 weekdays.add("Måndag");
                 weekdays.add("Tisdag");
@@ -146,10 +153,11 @@ public class MenuTabFragment extends Fragment {
                 }
 
                 WeekItemAdapter adapter = new WeekItemAdapter(getActivity(), R.layout.week_item, items);
+                Paper.book().write(WEEK_MEALS, items);
                 weekListView.setAdapter(adapter);
 
             } else {
-                Toast.makeText(getActivity(), "Det gick inte att hämta veckans meny. Försök igen senare!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), "Det gick inte att hämta veckans meny. Försök igen!", Toast.LENGTH_LONG).show();
             }
             swipeRefreshLayout.setRefreshing(false);
         }
