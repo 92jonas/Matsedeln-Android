@@ -9,12 +9,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
@@ -34,15 +29,8 @@ public class MainActivity extends FragmentActivity implements ActivityCompat.OnR
     public static final LatLng MAP_LOCATION = new LatLng(56.252793, 12.892882);
     public static final float MAP_ZOOM = 12f;
 
-    private GoogleMap map;
-    private MapFragment mapFragment;
     private MapHandler mapHandler;
-    private LinearLayout mapLl, contactLl;
-    private RelativeLayout menuRl;
     private static final int PERMISSION_MY_LOCATION = 12;
-    private ContactTabFragment mContactFragment;
-    private MenuTabFragment mMenuFragment;
-    private MapTabFragment mMapFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

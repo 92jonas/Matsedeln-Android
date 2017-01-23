@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#7e4839</color>
     <color name="colorPrimaryDark">#583227</color>
-    <color name="colorAccent">#FFFFFF</color>
+    <color name="colorAccent">#505050</color>
 
     <color name="currentDayText">#000000</color>
     <color name="currentDayText1">#3269df</color>

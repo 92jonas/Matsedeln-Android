@@ -58,13 +58,12 @@ public class MenuTabFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         initViews();
+        loadWeekList();
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        Log.i(TAG, "MenuTabFragment - onResume");
-        loadWeekList();
     }
 
     private void initViews() {
@@ -107,24 +106,15 @@ public class MenuTabFragment extends Fragment {
         @Override
         protected ArrayList<String> doInBackground(Void... params) {
             ArrayList<String> rows = new ArrayList<>();
-
             try {
-
-                Log.i(TAG, "JSoup - Start");
                 Document doc = Jsoup.connect("http://midgarden.se/dagens-lunch/").get();
-
-                Log.i(TAG, "JSoup - Doc loaded");
                 Elements divs = doc.getElementsByTag("blockquote");
                 Element div = divs.first();
-
                 Elements es = div.getElementsByTag("p");
-
                 for (Element e : es) {
                     Log.i(TAG, e.text());
                     rows.add(e.text());
                 }
-
-                Log.i(TAG, "JSoup - Stop");
             } catch (IOException e) {
                 Log.i(TAG, "Couldn't load website..");
             }
@@ -134,32 +124,35 @@ public class MenuTabFragment extends Fragment {
 
         @Override
         protected void onPostExecute(ArrayList<String> menuItems) {
-            if (!menuItems.isEmpty()) {
-                ArrayList<WeekItem> items = new ArrayList<>();
-                Log.i(TAG, "items size= " + menuItems.size());
+            try {
+                if (!menuItems.isEmpty()) {
+                    ArrayList<WeekItem> items = new ArrayList<>();
 
-                String strWeekNum = MenuParser.getWeekNumber(menuItems);
-                items.add(new WeekItem(strWeekNum, "Lunch 11.00 - 14.00"));
-                ArrayList<String> weekdays = new ArrayList<>();
-                weekdays.add("Måndag");
-                weekdays.add("Tisdag");
-                weekdays.add("Onsdag");
-                weekdays.add("Torsdag");
-                weekdays.add("Fredag");
-                weekdays.add("Lördag");
+                    String strWeekNum = MenuParser.getWeekNumber(menuItems);
+                    items.add(new WeekItem(strWeekNum, "Lunch 11.00 - 14.00"));
+                    ArrayList<String> weekdays = new ArrayList<>();
+                    weekdays.add("Måndag");
+                    weekdays.add("Tisdag");
+                    weekdays.add("Onsdag");
+                    weekdays.add("Torsdag");
+                    weekdays.add("Fredag");
+                    weekdays.add("Lördag");
 
-                for (int i = 0; i < weekdays.size(); i++) {
-                    items.add(MenuParser.getMealOfTheDay(menuItems, weekdays.get(i)));
+                    for (int i = 0; i < weekdays.size(); i++) {
+                        items.add(MenuParser.getMealOfTheDay(menuItems, weekdays.get(i)));
+                    }
+
+                    WeekItemAdapter adapter = new WeekItemAdapter(getActivity(), R.layout.week_item, items);
+                    Paper.book().write(WEEK_MEALS, items);
+                    weekListView.setAdapter(adapter);
+
+                } else {
+//                Toast.makeText(getContext(), "Det gick inte att hämta veckans meny. Försök igen!", Toast.LENGTH_LONG).show();
                 }
-
-                WeekItemAdapter adapter = new WeekItemAdapter(getActivity(), R.layout.week_item, items);
-                Paper.book().write(WEEK_MEALS, items);
-                weekListView.setAdapter(adapter);
-
-            } else {
-                Toast.makeText(getActivity(), "Det gick inte att hämta veckans meny. Försök igen!", Toast.LENGTH_LONG).show();
+                swipeRefreshLayout.setRefreshing(false);
+            }catch(NullPointerException e){
+                // Do nothing
             }
-            swipeRefreshLayout.setRefreshing(false);
         }
 
     }
