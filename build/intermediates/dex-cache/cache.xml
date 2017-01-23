@@ -21,6 +21,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2bbaa6f57c71d810ac69ebe427a170b689a729db">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_76842a2959075ca3463ad74cf58f9dd095d93033/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/Jonas/.gradle/caches/modules-2/files-2.1/com.esotericsoftware/kryo/4.0.0/9f5c64c1315ec79bee0f56bb88e4ae94b65048ce/kryo-4.0.0.jar"
         jumboMode="true"
         optimize="true"
@@ -36,15 +45,6 @@
         revision="25.0.0"
         sha1="bf2e1838e4428616c1aa26edf43de72b5b99bf84">
         <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tasks-9.8.0_c22f785e6ee55483f5b600542798727bfc9c83be/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="2de13fa4173908f58e9870e879cf687bc86b9331">
-        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_76842a2959075ca3463ad74cf58f9dd095d93033/classes.dex" />
     </item>
     <item
         is-multidex="true"

@@ -23,7 +23,7 @@
                 android:layout_height="25dp"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:layout_margin="30dp"
+                android:layout_margin="20dp"
                 android:fontFamily="sans-serif-condensed"
                 android:text="Ge förslag på vad du vill ha till lunch eller catering!"
                 android:textAlignment="center"
@@ -39,44 +39,46 @@
                 android:text="Namn:" />
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/et_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/textView2"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="32dp"
                 android:layout_marginEnd="32dp"
                 android:layout_marginLeft="32dp"
                 android:layout_marginRight="32dp"
                 android:layout_marginStart="32dp"
-                android:layout_marginTop="4dp"
                 android:ems="10"
                 android:inputType="textPersonName|textCapWords"
-                android:windowSoftInputMode="stateAlwaysHidden" />
+                android:windowSoftInputMode="stateAlwaysHidden"
+                android:hint="Skriv ditt name här..."
+                android:textColorHint="@color/otherDayText" />
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignStart="@+id/textView2"
-                android:layout_below="@+id/editText"
+                android:layout_below="@+id/et_name"
                 android:text="E-post:" />
 
             <EditText
-                android:id="@+id/editText2"
+                android:id="@+id/et_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/textView3"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="32dp"
                 android:layout_marginEnd="32dp"
                 android:layout_marginLeft="32dp"
                 android:layout_marginRight="32dp"
                 android:layout_marginStart="32dp"
-                android:layout_marginTop="4dp"
                 android:ems="10"
                 android:inputType="textEmailAddress"
-                android:windowSoftInputMode="stateAlwaysHidden" />
+                android:windowSoftInputMode="stateAlwaysHidden"
+                android:hint="Skriv din e-post här..."
+                android:textColorHint="@color/otherDayText" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -84,29 +86,30 @@
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/textView3"
                 android:layout_alignStart="@+id/textView3"
-                android:layout_below="@+id/editText2"
+                android:layout_below="@+id/et_email"
                 android:text="Förslag:" />
 
             <EditText
-                android:id="@+id/editText3"
+                android:id="@+id/et_forslag"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/textView4"
                 android:layout_marginEnd="32dp"
                 android:layout_marginLeft="32dp"
                 android:layout_marginRight="32dp"
                 android:layout_marginStart="32dp"
-                android:layout_marginTop="4dp"
                 android:ems="10"
-                android:inputType="textAutoComplete|textCapSentences"
-                android:windowSoftInputMode="stateAlwaysHidden" />
+                android:inputType="textAutoComplete|textCapSentences|textMultiLine"
+                android:windowSoftInputMode="stateAlwaysHidden"
+                android:hint="Skriv ditt förslag här..."
+                android:textColorHint="@color/otherDayText" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/btn_send"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
-                android:layout_alignEnd="@+id/editText3"
-                android:layout_below="@+id/editText3"
+                android:layout_alignEnd="@+id/et_forslag"
+                android:layout_below="@+id/et_forslag"
                 android:layout_marginTop="20dp"
                 android:text="Skicka" />
 
