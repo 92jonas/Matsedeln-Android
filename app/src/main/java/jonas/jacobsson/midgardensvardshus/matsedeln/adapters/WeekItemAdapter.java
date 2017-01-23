@@ -21,7 +21,7 @@ import jonas.jacobsson.midgardensvardshus.matsedeln.models.WeekItem;
 public class WeekItemAdapter extends ArrayAdapter<WeekItem> {
 
     private Context context;
-    private TextView day, alt1, divider, alt2;
+    private TextView day, food;
     private int currentDay;
 
     public WeekItemAdapter(Context context, int resource, ArrayList<WeekItem> items) {
@@ -47,7 +47,7 @@ public class WeekItemAdapter extends ArrayAdapter<WeekItem> {
 
         if (p != null) {
             int textColorId;
-            if (position == currentDay - 2) {
+            if (position == currentDay - 1) {
                 textColorId = p.getTextColor(true);
             } else {
                 textColorId = p.getTextColor(false);
@@ -55,28 +55,20 @@ public class WeekItemAdapter extends ArrayAdapter<WeekItem> {
             int textColor = ContextCompat.getColor(context, textColorId);
 
             day = (TextView) v.findViewById(R.id.week_item_day);
-            alt1 = (TextView) v.findViewById(R.id.week_item_food_alt1);
-            divider = (TextView) v.findViewById(R.id.week_item_divider);
-            alt2 = (TextView) v.findViewById(R.id.week_item_food_alt2);
+            food = (TextView) v.findViewById(R.id.week_item_food);
 
             if (day != null) {
                 day.setText(p.getDay());
                 day.setTextColor(textColor);
             }
 
-            if (alt1 != null) {
-                alt1.setText(p.getFoodAlt1());
-                alt1.setTextColor(textColor);
-            }
-
-            if (divider != null) {
-                divider.setText(p.getDivider());
-                divider.setTextColor(textColor);
-            }
-
-            if (alt2 != null) {
-                alt2.setText(p.getFoodAlt2());
-                alt2.setTextColor(textColor);
+            if (food != null) {
+                if (p.getFood().equals("")) {
+                    food.setVisibility(View.GONE);
+                } else {
+                    food.setText(p.getFood());
+                    food.setTextColor(textColor);
+                }
             }
 
         }
@@ -87,9 +79,7 @@ public class WeekItemAdapter extends ArrayAdapter<WeekItem> {
     public void setCurrentDay() {
 
         day.setTextColor(ContextCompat.getColor(context, R.color.currentDayText));
-        alt1.setTextColor(ContextCompat.getColor(context, R.color.currentDayText));
-        divider.setTextColor(ContextCompat.getColor(context, R.color.currentDayText));
-        alt2.setTextColor(ContextCompat.getColor(context, R.color.currentDayText));
+        food.setTextColor(ContextCompat.getColor(context, R.color.currentDayText));
     }
 
 }

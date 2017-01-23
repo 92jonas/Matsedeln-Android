@@ -8,29 +8,19 @@ import jonas.jacobsson.midgardensvardshus.matsedeln.R;
 
 public class WeekItem {
 
-    private String day, foodAlt1, divider, foodAlt2;
+    private String day, food;
 
-    public WeekItem(String day, String foodAlt1, String divider, String foodAlt2) {
+    public WeekItem(String day, String food) {
         this.day = day;
-        this.foodAlt1 = foodAlt1;
-        this.foodAlt2 = foodAlt2;
-        this.divider = divider;
+        this.food = food;
+    }
+
+    public String getFood() {
+        return food;
     }
 
     public String getDay() {
         return day;
-    }
-
-    public String getFoodAlt1() {
-        return foodAlt1;
-    }
-
-    public String getDivider() {
-        return divider;
-    }
-
-    public String getFoodAlt2() {
-        return foodAlt2;
     }
 
     public int getTextColor(boolean current) {

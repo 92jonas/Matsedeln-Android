@@ -19,6 +19,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 
+import io.paperdb.Paper;
 import jonas.jacobsson.midgardensvardshus.matsedeln.R;
 import jonas.jacobsson.midgardensvardshus.matsedeln.fragments.ContactTabFragment;
 import jonas.jacobsson.midgardensvardshus.matsedeln.fragments.MapTabFragment;
@@ -47,6 +48,7 @@ public class MainActivity extends FragmentActivity implements ActivityCompat.OnR
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Paper.init(this);
         initViews();
 
 

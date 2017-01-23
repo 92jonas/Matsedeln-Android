@@ -22,9 +22,12 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import jonas.jacobsson.midgardensvardshus.matsedeln.R;
 import jonas.jacobsson.midgardensvardshus.matsedeln.adapters.WeekItemAdapter;
 import jonas.jacobsson.midgardensvardshus.matsedeln.models.WeekItem;
+import jonas.jacobsson.midgardensvardshus.matsedeln.utils.MenuParser;
 
 /**
  * Created by Jonas on 2016-11-11.
@@ -34,15 +37,18 @@ public class MenuTabFragment extends Fragment {
 
     private static final String TAG = MenuTabFragment.class.getSimpleName();
 
-    private ListView weekListView;
-    private SwipeRefreshLayout swipeRefreshLayout;
-    private SwipeRefreshLayout.OnRefreshListener swipeRefreshListener;
+    @BindView(R.id.swipe_refresh)
+    SwipeRefreshLayout swipeRefreshLayout;
+
+    SwipeRefreshLayout.OnRefreshListener swipeRefreshListener;
+
+    @BindView(R.id.week_list_view)
+    ListView weekListView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_menu, container, false);
-
-
+        ButterKnife.bind(this, view);
         return view;
     }
 
@@ -60,8 +66,7 @@ public class MenuTabFragment extends Fragment {
     }
 
     private void initViews() {
-        this.weekListView = (ListView) getView().findViewById(R.id.week_list_view);
-        this.swipeRefreshLayout = (SwipeRefreshLayout) getView().findViewById(R.id.swipe_refresh);
+
         this.swipeRefreshListener = new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -124,33 +129,27 @@ public class MenuTabFragment extends Fragment {
         protected void onPostExecute(ArrayList<String> menuItems) {
             if (!menuItems.isEmpty()) {
                 ArrayList<WeekItem> items = new ArrayList<>();
-                TextView weekNumTv = (TextView) getView().findViewById(R.id.tv_week_number);
-                weekNumTv.setText(menuItems.get(0));
                 Log.i(TAG, "items size= " + menuItems.size());
 
-                for (int i = 1; i < menuItems.size(); i += 4) {
-                    Log.i(TAG, "items id= " + i);
+                String strWeekNum = MenuParser.getWeekNumber(menuItems);
+                items.add(new WeekItem(strWeekNum,"Lunch 11.00 - 14.00"));
+                ArrayList<String> weekdays = new ArrayList<>();
+                weekdays.add("Måndag");
+                weekdays.add("Tisdag");
+                weekdays.add("Onsdag");
+                weekdays.add("Torsdag");
+                weekdays.add("Fredag");
+                weekdays.add("Lördag");
 
-                    Log.i(TAG, "veckodag: " + menuItems.get(i));
-                    if (menuItems.size() > i + 3) {
-                        items.add(new WeekItem(menuItems.get(i), menuItems.get(i + 1), menuItems.get(i + 2), menuItems.get(i + 3)));
-                    } else if (menuItems.size() > i + 2) {
-                        items.add(new WeekItem(menuItems.get(i), menuItems.get(i + 1), menuItems.get(i + 2), ""));
-                    } else if (menuItems.size() > i + 1) {
-                        items.add(new WeekItem(menuItems.get(i), menuItems.get(i + 1), "", ""));
-                    } else {
-                        items.add(new WeekItem(menuItems.get(i), "", "", ""));
-                    }
-
+                for (int i = 0; i < weekdays.size(); i++) {
+                    items.add(MenuParser.getMealOfTheDay(menuItems, weekdays.get(i)));
                 }
-
 
                 WeekItemAdapter adapter = new WeekItemAdapter(getActivity(), R.layout.week_item, items);
                 weekListView.setAdapter(adapter);
 
-
             } else {
-                Toast.makeText(getActivity(), "Misslyckades, försök igen!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), "Det gick inte att hämta veckans meny. Försök igen senare!", Toast.LENGTH_LONG).show();
             }
             swipeRefreshLayout.setRefreshing(false);
         }

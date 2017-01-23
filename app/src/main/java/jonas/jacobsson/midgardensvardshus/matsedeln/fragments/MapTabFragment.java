@@ -54,7 +54,6 @@ public class MapTabFragment extends Fragment {
                 CameraUpdate cu = CameraUpdateFactory.newCameraPosition(CameraPosition.fromLatLngZoom(MAP_LOCATION, 12f));
                 mMap.moveCamera(cu);
 
-                mMap.getUiSettings().setMapToolbarEnabled(true);
                 m.showInfoWindow();
             }
         });
