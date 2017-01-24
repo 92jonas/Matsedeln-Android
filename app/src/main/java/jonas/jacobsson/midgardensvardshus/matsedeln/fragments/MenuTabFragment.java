@@ -6,12 +6,12 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
-import android.widget.Toast;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -25,7 +25,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.paperdb.Paper;
 import jonas.jacobsson.midgardensvardshus.matsedeln.R;
-import jonas.jacobsson.midgardensvardshus.matsedeln.adapters.WeekItemAdapter;
+import jonas.jacobsson.midgardensvardshus.matsedeln.adapters.WeekItemRecyclerAdapter;
 import jonas.jacobsson.midgardensvardshus.matsedeln.models.WeekItem;
 import jonas.jacobsson.midgardensvardshus.matsedeln.utils.MenuParser;
 
@@ -45,7 +45,7 @@ public class MenuTabFragment extends Fragment {
     SwipeRefreshLayout.OnRefreshListener swipeRefreshListener;
 
     @BindView(R.id.week_list_view)
-    ListView weekListView;
+    RecyclerView weekListView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -67,6 +67,11 @@ public class MenuTabFragment extends Fragment {
     }
 
     private void initViews() {
+        weekListView.setHasFixedSize(true);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        weekListView.setLayoutManager(linearLayoutManager);
+
 
         this.swipeRefreshListener = new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -82,7 +87,7 @@ public class MenuTabFragment extends Fragment {
     private void loadWeekList() {
         ArrayList<WeekItem> items = Paper.book().read(WEEK_MEALS);
         if (items != null) {
-            WeekItemAdapter adapter = new WeekItemAdapter(getActivity(), R.layout.week_item, items);
+            WeekItemRecyclerAdapter adapter = new WeekItemRecyclerAdapter(getContext(), items);
             weekListView.setAdapter(adapter);
         }
         swipeRefreshLayout.post(new Runnable() {
@@ -129,20 +134,20 @@ public class MenuTabFragment extends Fragment {
                     ArrayList<WeekItem> items = new ArrayList<>();
 
                     String strWeekNum = MenuParser.getWeekNumber(menuItems);
-                    items.add(new WeekItem(strWeekNum, "Lunch 11.00 - 14.00"));
+                    items.add(new WeekItem(strWeekNum, getResources().getString(R.string.times)));
                     ArrayList<String> weekdays = new ArrayList<>();
                     weekdays.add("Måndag");
                     weekdays.add("Tisdag");
                     weekdays.add("Onsdag");
                     weekdays.add("Torsdag");
                     weekdays.add("Fredag");
-                    weekdays.add("Lördag");
+//                    weekdays.add("Lördag");
 
                     for (int i = 0; i < weekdays.size(); i++) {
                         items.add(MenuParser.getMealOfTheDay(menuItems, weekdays.get(i)));
                     }
 
-                    WeekItemAdapter adapter = new WeekItemAdapter(getActivity(), R.layout.week_item, items);
+                    WeekItemRecyclerAdapter adapter = new WeekItemRecyclerAdapter(getContext(), items);
                     Paper.book().write(WEEK_MEALS, items);
                     weekListView.setAdapter(adapter);
 
@@ -150,7 +155,7 @@ public class MenuTabFragment extends Fragment {
 //                Toast.makeText(getContext(), "Det gick inte att hämta veckans meny. Försök igen!", Toast.LENGTH_LONG).show();
                 }
                 swipeRefreshLayout.setRefreshing(false);
-            }catch(NullPointerException e){
+            } catch (NullPointerException e) {
                 // Do nothing
             }
         }

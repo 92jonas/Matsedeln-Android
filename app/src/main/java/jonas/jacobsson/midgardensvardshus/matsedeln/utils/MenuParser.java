@@ -15,7 +15,8 @@ public class MenuParser {
     public static String getWeekNumber(ArrayList<String> rows) {
         for (String row : rows) {
             if (row.startsWith("V.") || row.startsWith("v.")) {
-                return row;
+                String[] parts = row.split("\\.");
+                return "Vecka " + parts[1];
             }
         }
         return "";

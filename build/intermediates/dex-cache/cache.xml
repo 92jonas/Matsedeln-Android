@@ -102,6 +102,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/Jonas/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/glide-3.7.0_7e1fb68ac5e05ad77b146c7aa0c5167ececc0e25/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/exploded-aar/com.android.support.constraint/constraint-layout/1.0.0-beta4/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -153,6 +162,15 @@
         revision="25.0.0"
         sha1="5e497d60f0cb6ce87c458ac5420a46d0fed49bd0">
         <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-25.0.0_14fa45456526ba326aa0976713052cb750059a4b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8a372c4191f80489770a231f7be4820b204b886a">
+        <dex dex="/Users/Jonas/Dropbox/Utveckling/Android-Matsedel/Matsedeln-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-25.0.0_88b4ead0a52f5918087c1ded87d41e1c4ecfd130/classes.dex" />
     </item>
     <item
         is-multidex="true"
