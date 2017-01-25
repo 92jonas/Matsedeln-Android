@@ -7,7 +7,6 @@
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="70dp"
         android:fillViewport="true"
         android:orientation="vertical">
 
@@ -15,104 +14,119 @@
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp">
 
-            <TextView
-                android:id="@+id/textView5"
+            <include
+                android:id="@+id/top_layout"
+                layout="@layout/top_layout" />
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
-                android:layout_height="25dp"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_margin="20dp"
-                android:fontFamily="sans-serif-condensed"
-                android:text="Ge förslag på vad du vill ha till lunch eller catering!"
-                android:textAlignment="center"
-                android:textSize="18sp" />
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_below="@id/top_layout">
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/textView5"
-                android:layout_marginStart="40dp"
-                android:text="Namn:" />
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="20dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Ge förslag på vad du vill ha till lunch eller catering!"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
 
-            <EditText
-                android:id="@+id/et_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/textView2"
-                android:layout_marginBottom="32dp"
-                android:layout_marginEnd="32dp"
-                android:layout_marginLeft="32dp"
-                android:layout_marginRight="32dp"
-                android:layout_marginStart="32dp"
-                android:ems="10"
-                android:inputType="textPersonName|textCapWords"
-                android:windowSoftInputMode="stateAlwaysHidden"
-                android:hint="Skriv ditt name här..."
-                android:textColorHint="@color/otherDayText" />
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textView5"
+                    android:layout_marginStart="40dp"
+                    android:text="Namn:" />
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/textView2"
-                android:layout_below="@+id/et_name"
-                android:text="E-post:" />
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textView2"
+                    android:layout_marginBottom="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginStart="32dp"
+                    android:ems="10"
+                    android:hint="Skriv ditt name här..."
+                    android:inputType="textPersonName|textCapWords"
+                    android:textColorHint="@color/otherDayText"
+                    android:windowSoftInputMode="stateAlwaysHidden" />
 
-            <EditText
-                android:id="@+id/et_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/textView3"
-                android:layout_marginBottom="32dp"
-                android:layout_marginEnd="32dp"
-                android:layout_marginLeft="32dp"
-                android:layout_marginRight="32dp"
-                android:layout_marginStart="32dp"
-                android:ems="10"
-                android:inputType="textEmailAddress"
-                android:windowSoftInputMode="stateAlwaysHidden"
-                android:hint="Skriv din e-post här..."
-                android:textColorHint="@color/otherDayText" />
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView2"
+                    android:layout_below="@+id/et_name"
+                    android:text="E-post:" />
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/textView3"
-                android:layout_alignStart="@+id/textView3"
-                android:layout_below="@+id/et_email"
-                android:text="Förslag:" />
+                <EditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textView3"
+                    android:layout_marginBottom="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginStart="32dp"
+                    android:ems="10"
+                    android:hint="Skriv din e-post här..."
+                    android:inputType="textEmailAddress"
+                    android:textColorHint="@color/otherDayText"
+                    android:windowSoftInputMode="stateAlwaysHidden" />
 
-            <EditText
-                android:id="@+id/et_forslag"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textView4"
-                android:layout_marginEnd="32dp"
-                android:layout_marginLeft="32dp"
-                android:layout_marginRight="32dp"
-                android:layout_marginStart="32dp"
-                android:ems="10"
-                android:inputType="textAutoComplete|textCapSentences|textMultiLine"
-                android:windowSoftInputMode="stateAlwaysHidden"
-                android:hint="Skriv ditt förslag här..."
-                android:textColorHint="@color/otherDayText" />
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView3"
+                    android:layout_alignStart="@+id/textView3"
+                    android:layout_below="@+id/et_email"
+                    android:text="Förslag:" />
 
-            <Button
-                android:id="@+id/btn_send"
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-                android:layout_alignEnd="@+id/et_forslag"
-                android:layout_below="@+id/et_forslag"
-                android:layout_marginTop="20dp"
-                android:text="Skicka" />
+                <EditText
+                    android:id="@+id/et_forslag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView4"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginStart="32dp"
+                    android:ems="10"
+                    android:hint="Skriv ditt förslag här..."
+                    android:inputType="textAutoComplete|textCapSentences|textMultiLine"
+                    android:textColorHint="@color/otherDayText"
+                    android:windowSoftInputMode="stateAlwaysHidden" />
 
+                <Button
+                    android:id="@+id/btn_send"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_alignEnd="@+id/et_forslag"
+                    android:layout_below="@+id/et_forslag"
+                    android:layout_marginTop="20dp"
+                    android:text="Skicka" />
+
+            </RelativeLayout>
         </RelativeLayout>
     </ScrollView>
 </RelativeLayout>

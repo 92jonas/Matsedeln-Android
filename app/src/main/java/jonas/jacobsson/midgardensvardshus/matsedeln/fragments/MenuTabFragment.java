@@ -155,7 +155,7 @@ public class MenuTabFragment extends Fragment {
 //                Toast.makeText(getContext(), "Det gick inte att hämta veckans meny. Försök igen!", Toast.LENGTH_LONG).show();
                 }
                 swipeRefreshLayout.setRefreshing(false);
-            } catch (NullPointerException e) {
+            } catch (NullPointerException | IllegalStateException e) {
                 // Do nothing
             }
         }

@@ -38,8 +38,6 @@ public class MainActivity extends FragmentActivity implements ActivityCompat.OnR
         setContentView(R.layout.activity_main);
         Paper.init(this);
         initViews();
-
-
     }
 
 
