@@ -59,7 +59,7 @@ public class ContactTabFragment extends Fragment {
         }
         if (!validText) {
             showError(etText);
-            if(!errorMsg.isEmpty()){
+            if (!errorMsg.isEmpty()) {
                 errorMsg += " och ";
             }
             errorMsg += "förslag";
@@ -93,6 +93,6 @@ public class ContactTabFragment extends Fragment {
     }
 
     public String getUserMessage() {
-        return etName.getText().toString() + " har ett förslag:\n\n" + etText.getText().toString();
+        return etName.getText().toString() + " har ett förslag:\n\n" + etText.getText().toString() + "\n\n Mvh, Midgårdens matsedel";
     }
 }
