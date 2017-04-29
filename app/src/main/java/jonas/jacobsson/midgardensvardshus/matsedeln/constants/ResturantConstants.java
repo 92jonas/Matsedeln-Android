@@ -7,4 +7,5 @@ package jonas.jacobsson.midgardensvardshus.matsedeln.constants;
 public class ResturantConstants {
     public static final double LOCATION_LAT = 56.252793;
     public static final double LOCATION_LON = 12.892882;
+    public static final String EMAIL = "info@midgarden.se";
 }
