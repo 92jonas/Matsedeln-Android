@@ -22,12 +22,4 @@ public class WeekItem {
     public String getDay() {
         return day;
     }
-
-    public int getTextColor(boolean current) {
-        if (current) {
-            return R.color.currentDayText;
-        } else {
-            return R.color.otherDayText;
-        }
-    }
 }

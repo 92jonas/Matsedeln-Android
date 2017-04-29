@@ -18,6 +18,7 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import jonas.jacobsson.midgardensvardshus.matsedeln.R;
+import jonas.jacobsson.midgardensvardshus.matsedeln.constants.ResturantConstants;
 
 /**
  * Created by Jonas on 2016-11-11.
@@ -26,15 +27,13 @@ import jonas.jacobsson.midgardensvardshus.matsedeln.R;
 public class MapTabFragment extends Fragment {
 
 
-    public static final LatLng MAP_LOCATION = new LatLng(56.252793, 12.892882);
+    public static final LatLng MAP_LOCATION = new LatLng(ResturantConstants.LOCATION_LAT, ResturantConstants.LOCATION_LON);
     private MapView mMapView;
     private GoogleMap mMap;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_map, container, false);
-
-        return view;
+        return inflater.inflate(R.layout.fragment_map, container, false);
     }
 
     @Override

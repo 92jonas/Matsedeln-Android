@@ -1,6 +1,5 @@
 package jonas.jacobsson.midgardensvardshus.matsedeln.activities;
 
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.v4.app.ActivityCompat;
@@ -10,41 +9,30 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.google.android.gms.maps.model.LatLng;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 
-import io.paperdb.Paper;
 import jonas.jacobsson.midgardensvardshus.matsedeln.R;
 import jonas.jacobsson.midgardensvardshus.matsedeln.fragments.ContactTabFragment;
 import jonas.jacobsson.midgardensvardshus.matsedeln.fragments.MapTabFragment;
 import jonas.jacobsson.midgardensvardshus.matsedeln.fragments.MenuTabFragment;
-import jonas.jacobsson.midgardensvardshus.matsedeln.utils.MapHandler;
 
 
 public class MainActivity extends FragmentActivity implements ActivityCompat.OnRequestPermissionsResultCallback {
     private static final String TAG = MainActivity.class.getSimpleName();
 
     public static final String URL = "http://midgarden.se/dagens-lunch/";
-    public static final LatLng MAP_LOCATION = new LatLng(56.252793, 12.892882);
-    public static final float MAP_ZOOM = 12f;
-
-    private MapHandler mapHandler;
-    private static final int PERMISSION_MY_LOCATION = 12;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Paper.init(this);
         initViews();
     }
 
 
     private void initViews() {
-
         initBottomBar();
-
     }
 
     @Override
@@ -98,21 +86,8 @@ public class MainActivity extends FragmentActivity implements ActivityCompat.OnR
         return super.onOptionsItemSelected(item);
     }
 
-
     @Override
-    public void onRequestPermissionsResult(int requestCode,
-                                           String permissions[], int[] grantResults) {
-        switch (requestCode) {
-            case PERMISSION_MY_LOCATION: {
-                // If request is cancelled, the result arrays are empty.
-                if (grantResults.length > 0
-                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    mapHandler.initMyLocation(this);
-
-                }
-            }
-        }
+    protected void onDestroy() {
+        super.onDestroy();
     }
-
-
 }

@@ -54,13 +54,12 @@ public class WeekItemRecyclerAdapter extends RecyclerView.Adapter<WeekItemRecycl
     public void onBindViewHolder(ViewHolder holder, int position) {
         WeekItem p = list.get(position);
         if (p != null) {
-            int textColorId;
+            int textColor;
             if (position == currentDay - 1) {
-                textColorId = p.getTextColor(true);
+                textColor = ContextCompat.getColor(context, R.color.currentDayText);
             } else {
-                textColorId = p.getTextColor(false);
+                textColor = ContextCompat.getColor(context, R.color.otherDayText);
             }
-            int textColor = ContextCompat.getColor(context, textColorId);
 
             if (p.getDay().equals("")) {
                 holder.day.setVisibility(View.GONE);

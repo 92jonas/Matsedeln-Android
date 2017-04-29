@@ -23,10 +23,10 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import io.paperdb.Paper;
 import jonas.jacobsson.midgardensvardshus.matsedeln.R;
 import jonas.jacobsson.midgardensvardshus.matsedeln.adapters.WeekItemRecyclerAdapter;
 import jonas.jacobsson.midgardensvardshus.matsedeln.models.WeekItem;
+import jonas.jacobsson.midgardensvardshus.matsedeln.utils.MemoryUtils;
 import jonas.jacobsson.midgardensvardshus.matsedeln.utils.MenuParser;
 
 /**
@@ -59,11 +59,7 @@ public class MenuTabFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         initViews();
         loadWeekList();
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
+        swipeRefreshListener.onRefresh();
     }
 
     private void initViews() {
@@ -71,7 +67,6 @@ public class MenuTabFragment extends Fragment {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         weekListView.setLayoutManager(linearLayoutManager);
-
 
         this.swipeRefreshListener = new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -85,18 +80,11 @@ public class MenuTabFragment extends Fragment {
     }
 
     private void loadWeekList() {
-        ArrayList<WeekItem> items = Paper.book().read(WEEK_MEALS);
+        ArrayList<WeekItem> items = MemoryUtils.loadMenu(getContext());
         if (items != null) {
             WeekItemRecyclerAdapter adapter = new WeekItemRecyclerAdapter(getContext(), items);
             weekListView.setAdapter(adapter);
         }
-        swipeRefreshLayout.post(new Runnable() {
-            @Override
-            public void run() {
-                swipeRefreshLayout.setRefreshing(true);
-                swipeRefreshListener.onRefresh();
-            }
-        });
     }
 
 
@@ -141,14 +129,14 @@ public class MenuTabFragment extends Fragment {
                     weekdays.add("Onsdag");
                     weekdays.add("Torsdag");
                     weekdays.add("Fredag");
-//                    weekdays.add("Lördag");
+                    weekdays.add("Lördag");
 
                     for (int i = 0; i < weekdays.size(); i++) {
-                        items.add(MenuParser.getMealOfTheDay(menuItems, weekdays.get(i)));
+                        items.add(MenuParser.getMealOfTheDay(menuItems, i));
                     }
 
                     WeekItemRecyclerAdapter adapter = new WeekItemRecyclerAdapter(getContext(), items);
-                    Paper.book().write(WEEK_MEALS, items);
+                    MemoryUtils.saveMenu(getContext(), items);
                     weekListView.setAdapter(adapter);
 
                 } else {

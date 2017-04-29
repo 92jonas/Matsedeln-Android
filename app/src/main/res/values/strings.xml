@@ -15,4 +15,6 @@
     <string name="opening_hours">Öppettider:</string>
     <string name="times_lunch">Lunch 11.00 - 14.00</string>
     <string name="times">Måndag – Fredag \t10.00 – 16.00 \nLördag 10.00 – 15.00</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
 </resources>

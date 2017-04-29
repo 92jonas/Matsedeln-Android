@@ -15,11 +15,11 @@
     <include layout="@layout/top_layout"
         android:id="@+id/top_layout"/>
 
-    <com.google.android.gms.ads.AdView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/adView"
-        android:adSize="10dp"/>
+    <!--<com.google.android.gms.ads.AdView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/adView"-->
+        <!--android:adSize="10dp"/>-->
 
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/swipe_refresh"
